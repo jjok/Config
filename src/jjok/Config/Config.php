@@ -2,6 +2,8 @@
 
 namespace jjok\Config;
 
+use jjok\Config\Exceptions\BadConfigurationException;
+
 /**
  * 
  * @author Jonathan Jefferies (jjok)

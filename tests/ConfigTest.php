@@ -1,7 +1,7 @@
 <?php
 
-require_once 'src/jjok/Config/BadConfigurationException.php';
 require_once 'src/jjok/Config/Config.php';
+require_once 'src/jjok/Config/Exceptions/BadConfigurationException.php';
 
 class ConfigTest extends PHPUnit_Framework_TestCase {
 
@@ -27,14 +27,14 @@ class ConfigTest extends PHPUnit_Framework_TestCase {
 		$this->assertSame($test_object, $config->get('an object'));
 	}
 
-	public function testExceptionThrownIfValueNotFound() {
+	public function testExceptionIsThrownIfValueNotFound() {
 
 		$config = new \jjok\Config\Config();
 		
 		try {
 			$config->get('value that does not exist');
 		}
-		catch(\jjok\Config\BadConfigurationException $e) {
+		catch(\jjok\Config\Exceptions\BadConfigurationException $e) {
 			$this->assertTrue(true);
 		}
 		catch(\Exception $e) {

@@ -1,6 +1,6 @@
 <?php
 
-namespace jjok\Config;
+namespace jjok\Config\Exceptions;
 
 /**
  * Exception thrown if Config::get is called with the name of a value which
