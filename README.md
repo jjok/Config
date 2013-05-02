@@ -1,7 +1,12 @@
 Config
 ======
 
+[![Build Status](https://travis-ci.org/jjok/Config.png)](https://travis-ci.org/jjok/Config)
+
 A simple configuration class.
+
+Example
+-------
 
 	$config = new jjok\Config\Config();
 	
@@ -18,6 +23,7 @@ A simple configuration class.
 	catch(\Exception $e) {
 		echo $e->getMessage();
 	}
+
 
 Run tests
 ---------
