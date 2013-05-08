@@ -61,4 +61,12 @@ class Config {
 	public function set($key, $value) {
 		$this->values[$key] = $value;
 	}
+	
+	/**
+	 * Create a new config instance.
+	 * @return Config
+	 */
+	public static function create() {
+		return new static();
+	}
 }
