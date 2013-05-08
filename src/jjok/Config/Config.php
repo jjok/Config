@@ -29,7 +29,7 @@ use jjok\Config\Exceptions\BadConfigurationException;
 /**
  * Stores configuration values.
  * @author Jonathan Jefferies (jjok)
- * @version 0.9.0
+ * @version 1.0.0
  */
 class Config {
 
