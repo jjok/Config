@@ -57,9 +57,12 @@ class Config {
 	 * Set a value.
 	 * @param string $key An identifying name for the value.
 	 * @param mixed $value The value.
+	 * @return Config
 	 */
 	public function set($key, $value) {
 		$this->values[$key] = $value;
+		
+		return $this;
 	}
 	
 	/**

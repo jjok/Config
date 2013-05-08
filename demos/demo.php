@@ -12,7 +12,7 @@ try {
 	# Get a value that has been set
 	echo $config->get('some_setting');
 	
-	# Trying to get a value that hasn't been set throws and exception
+	# Trying to get a value that hasn't been set throws an exception
 	echo $config->get('some_missing_setting');
 }
 catch(\jjok\Config\Exceptions\BadConfigurationException $e) {
