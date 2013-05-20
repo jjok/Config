@@ -44,25 +44,15 @@ class ConfigTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testInstanceOfConfigCanBeStaticallyCreated() {
 		$this->assertInstanceOf('jjok\Config\Config', \jjok\Config\Config::create());
-
 		$this->assertInstanceOf('MockConfig', MockConfig::create());
 	}
 
 	/**
+	 * @expectedException \jjok\Config\Exceptions\BadConfigurationException
 	 * @covers \jjok\Config\Config::get
 	 */
 	public function testExceptionIsThrownIfValueNotFound() {
-
 		$config = new \jjok\Config\Config();
-		
-		try {
-			$config->get('value that does not exist');
-		}
-		catch(\jjok\Config\Exceptions\BadConfigurationException $e) {
-			$this->assertTrue(true);
-		}
-		catch(\Exception $e) {
-			$this->assertTrue(false);
-		}
+		$config->get('value that does not exist');
 	}
 }
