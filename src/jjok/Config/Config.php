@@ -46,11 +46,11 @@ class Config {
 	 * @return mixed
 	 */
 	public function get($key) {
-		if(!array_key_exists($key, $this->values)) {
-			throw new BadConfigurationException(sprintf('"%s" does not have a value configured.', $key));
+		if(array_key_exists($key, $this->values)) {
+			return $this->values[$key];
 		}
 		
-		return $this->values[$key];
+		throw new BadConfigurationException(sprintf('"%s" does not have a value configured.', $key));
 	}
 
 	/**
