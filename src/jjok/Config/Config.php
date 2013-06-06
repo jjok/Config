@@ -29,7 +29,7 @@ use jjok\Config\Exceptions\BadConfigurationException;
 /**
  * Stores configuration values.
  * @author Jonathan Jefferies (jjok)
- * @version 1.0.0
+ * @version 1.1.0
  */
 class Config {
 
@@ -38,6 +38,14 @@ class Config {
 	 * @var mixed[]
 	 */
 	protected $values = array();
+	
+	/**
+	 * 
+	 * @param array $values
+	 */
+	public function __construct(array $values = array()) {
+		$this->values = $values;
+	}
 	
 	/**
 	 * Get a configured value.

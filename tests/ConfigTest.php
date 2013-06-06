@@ -8,6 +8,19 @@ class MockConfig extends \jjok\Config\Config {}
 class ConfigTest extends PHPUnit_Framework_TestCase {
 
 	/**
+	 * @covers \jjok\Config\Config::__construct
+	 */
+	public function testConstructorParamSetsValues() {
+		$config = new \jjok\Config\Config(array(
+			'test name 1' => 'test value 1',
+			'test name 2' => 'test value 2'
+		));
+
+		$this->assertSame('test value 1', $config->get('test name 1'));
+		$this->assertSame('test value 2', $config->get('test name 2'));
+	}
+
+	/**
 	 * @covers \jjok\Config\Config::set
 	 */
 	public function testSetReturnsSelf() {

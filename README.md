@@ -5,8 +5,8 @@ Config
 
 A simple configuration class.
 
-Example
--------
+Examples
+--------
 
 	$config = new \jjok\Config\Config();
 	
@@ -25,6 +25,13 @@ Example
 	}
 
 Get configuration instance in one line:
+
+	return new \jjok\Config\Config(array(
+		'some_setting' => 'Some Value',
+		'some_other_setting' => 'Some Other Value'
+	));
+
+Or:
 
 	return \jjok\Config\Config::create()
 				->set('some_setting', 'Some Value')
