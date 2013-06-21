@@ -29,7 +29,7 @@ use jjok\Config\Exceptions\BadConfigurationException;
 /**
  * Stores configuration values.
  * @author Jonathan Jefferies (jjok)
- * @version 1.1.0
+ * @version 1.2.0
  */
 class Config {
 
@@ -75,6 +75,7 @@ class Config {
 	
 	/**
 	 * Create a new config instance.
+	 * @deprecated Pass values straight into Config::__construct instead.
 	 * @return Config
 	 */
 	public static function create() {

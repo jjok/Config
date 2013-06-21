@@ -5,6 +5,7 @@ Config
 
 A simple configuration class.
 
+
 Examples
 --------
 
@@ -30,12 +31,6 @@ Get configuration instance in one line:
 		'some_setting' => 'Some Value',
 		'some_other_setting' => 'Some Other Value'
 	));
-
-Or:
-
-	return \jjok\Config\Config::create()
-				->set('some_setting', 'Some Value')
-				->set('some_other_setting', 'Some Other Value');
 
 
 Run tests
