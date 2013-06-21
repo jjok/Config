@@ -43,6 +43,8 @@ class ConfigTest extends PHPUnit_Framework_TestCase {
 		$config = new \jjok\Config\Config();
 
 		$test_string = 'Some string value';
+		$test_true = true;
+		$test_false = false;
 		$test_integer = 1234567890;
 		$test_float = 12345.67890;
 		$test_object = new \jjok\Config\Config();
@@ -53,12 +55,16 @@ class ConfigTest extends PHPUnit_Framework_TestCase {
 
 		$config->set('a string', $test_string);
 		
-		$config->set('an integer', $test_integer)
+		$config->set('true', $test_true)
+		       ->set('false', $test_false)
+		       ->set('an integer', $test_integer)
 		       ->set('a float', $test_float)
 		       ->set('an array', $test_array)
 		       ->set('an object', $test_object);
 
 		$this->assertSame($test_string, $config->get('a string'));
+		$this->assertSame($test_true, $config->get('true'));
+		$this->assertSame($test_false, $config->get('false'));
 		$this->assertSame($test_integer, $config->get('an integer'));
 		$this->assertSame($test_float, $config->get('a float'));
 		$this->assertSame($test_array, $config->get('an array'));
