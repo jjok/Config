@@ -72,14 +72,6 @@ class ConfigTest extends PHPUnit_Framework_TestCase {
 	}
 
 	/**
-	 * @covers \jjok\Config\Config::create
-	 */
-	public function testInstanceOfConfigCanBeStaticallyCreated() {
-		$this->assertInstanceOf('jjok\Config\Config', \jjok\Config\Config::create());
-		$this->assertInstanceOf('MockConfig', MockConfig::create());
-	}
-
-	/**
 	 * @expectedException \jjok\Config\Exceptions\BadConfigurationException
 	 * @covers \jjok\Config\Config::get
 	 */

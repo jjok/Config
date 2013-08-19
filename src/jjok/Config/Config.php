@@ -72,13 +72,4 @@ class Config {
 		
 		return $this;
 	}
-	
-	/**
-	 * Create a new config instance.
-	 * @deprecated Pass values straight into Config::__construct instead.
-	 * @return Config
-	 */
-	public static function create() {
-		return new static();
-	}
 }
