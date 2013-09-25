@@ -1,0 +1,14 @@
+{
+	"name": "jjok/config",
+	"description": "A simple configuration class.",
+	"license": "MIT",
+	"homepage": "https://github.com/jjok/Config",
+	"authors": [{
+		"name": "Jonathan Jefferies",
+		"homepage": "http://jjok.co.uk",
+		"role": "Developer"
+	}],
+    "require": {
+        "php": ">=5.3.0"
+    }
+}
