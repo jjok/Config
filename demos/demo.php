@@ -3,7 +3,10 @@
 require '../src/jjok/Config/Config.php';
 require '../src/jjok/Config/Exceptions/BadConfigurationException.php';
 
-$config = new jjok\Config\Config();
+use jjok\Config\Config;
+use jjok\Config\Exceptions\BadConfigurationException;
+
+$config = new Config();
 
 # Set a value
 $config->set('some_setting', 'Some Value');
@@ -15,6 +18,6 @@ try {
 	# Trying to get a value that hasn't been set throws an exception
 	echo $config->get('some_missing_setting');
 }
-catch(\jjok\Config\Exceptions\BadConfigurationException $e) {
+catch(BadConfigurationException $e) {
 	echo $e->getMessage();
 }
