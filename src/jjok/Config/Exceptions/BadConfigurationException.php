@@ -28,6 +28,6 @@ namespace jjok\Config\Exceptions;
  * Exception thrown if Config::get is called with the name of a value which
  * has not been set.
  * @author Jonathan Jefferies (jjok)
- * @version 2.0.1
+ * @version 2.0.2
  */
 class BadConfigurationException extends \UnexpectedValueException {}
